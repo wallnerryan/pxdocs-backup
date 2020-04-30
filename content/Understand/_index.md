@@ -9,7 +9,7 @@ type: common-landing
 series: backup
 ---
 
-PX-Backup is a Kubernetes backup solution that allows you to back up and restore applications and their data across multiple clusters. PX-Backup works through PX-Central, allowing you or any other approved users to manage multiple clusters and their backups from a single UI. Under this principle of multitenancy, authorized users connect through OIDC to create and manage backups for clusters and apps which they have permissions without needing to go through an administrator. 
+PX-Backup is a Kubernetes backup solution that allows you to back up and restore applications and their data across multiple clusters. PX-Backup is a component of PX-Central, allowing you or any other approved users to manage multiple clusters and their backups from a single UI. Under this principle of multitenancy, authorized users connect through OIDC to create and manage backups for clusters and apps which they have permissions without needing to go through an administrator. 
 
 PX-Backup is compatible with any Kubernetes cluster, including managed and cloud deployments, and does not require PX-Enterprise to be installed. 
 PX-Backup integrates with major block storage providers:
@@ -39,7 +39,7 @@ PX-Backup is capable of backing up the following Kubernetes resources:
 
 ## Understand how PX-Backup works
 
-PX-Backup provides namespace and label selectors, allowing you to create granular backups of the application you want. You can broadly backup an entire namespace, or you can use label selectors to select only certain resources to backup. This selection method also helps preserve associated configuration and pod data, ensuring that your backups will work properly once restored. For example, PX-backup can back up a mySQL deployment containing pods, PVCs, and volumes tagged with a `app = mysql` label. Given this system, PX-Backup can backup stateful apps as easily as stateless ones. 
+PX-Backup provides namespace and label selectors, allowing you to create granular backups of the application you want. You can broadly backup an entire namespace, or you can use label selectors to select only certain resources to backup. This selection method also helps preserve associated configuration and pod data, ensuring that your backups will work properly once restored. For example, PX-backup can back up a MySQL deployment containing pods, PVCs, and volumes tagged with an `app = mysql` label. Given this system, PX-Backup can backup stateful apps as easily as stateless ones. 
 <!-- <??? True? Better validate this step. ???> -->
 
 You can schedule backups by creating an independent schedule policy that defines when backups run and how many rolling copies they keep, and you can associate this schedule policy with as many backups as you want. 
@@ -53,7 +53,7 @@ In order to use PX-Backup, it’s helpful to understand the components that make
 
 ### Clusters 
 
-A cluster in PX-Backup is any Kubernetes cluster that PX-Backup makes backups from or restores backups to. PX-Backup supports pretty much any Kubernetes cluster that’s internet accessible <??? and some that aren’t ???>. With PX-Backup, you can monitor, backup, and restore across all of your Kubernetes clusters.
+A cluster in PX-Backup is any Kubernetes cluster that PX-Backup makes backups from or restores backups to. PX-Backup supports pretty much any Kubernetes cluster that’s network accessible. With PX-Backup, you can monitor, backup, and restore across all of your Kubernetes clusters.
 
 ### Backups
 
@@ -77,7 +77,7 @@ Create schedule policies and attach them to backups to run them at designated ti
 
 ### Rules 
 
-Create commands which run before or after a backup operation is performed. Specify labels
+Create commands which run before or after a backup operation is performed. Specify labels.
 
 ### Application view
 
@@ -86,9 +86,9 @@ You interact with PX-Backup through a central application view. From here, you c
 
 ## Get Started
 
-Perform the following tasks to quickly get started with PX-Backup and perform your first backup:
+Perform the following tasks to get started with PX-Backup and perform your first backup:
 
 1. [Install PX-Backup](/install)
-2. [Add a cluster](/add-a-cluster)
+2. [Add a cluster](/use-px-backup/cluster/)
 3. [Configure backup locations](/configure-backup-locations)
 4. [Perform a backup](/perform-backup)

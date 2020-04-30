@@ -33,7 +33,7 @@ You can restore backups to the cluster you created it from, or to a new cluster.
 
 ## Search for set of backups based on dates and restore from them
 
-1. From the PX-Central home page, select the **Backup** button for the cluster you want to back up:
+1. From the PX-Central home page, select the **Backup** button for the cluster you want to restore from:
 
     ![](/img/select-backup.png)
 

@@ -25,9 +25,9 @@ Once you’ve created any backup rules and schedule policies you want, you can u
     
     * **Backup name**: the name of the backup you want displayed in the PX-Backup UI
     * **Destination location**: which bucket you want to store your backups onto
-    * **Schedule**: Run the backup immediately or choose a schedule rule to associate with this backup
+    * **Schedule**: run the backup immediately or choose a schedule rule to associate with this backup
     * **Pre-exec rule**: any rules you want to execute before the backup runs
-    * **Post-exec rule**: any rules you want to execture after the backup runs
+    * **Post-exec rule**: any rules you want to execute after the backup runs
     * **Backup labels**: any labels you want to attach to the backup once it's created
 
     ![](/img/populate-backup-fields.png)
@@ -39,4 +39,3 @@ Once you’ve created any backup rules and schedule policies you want, you can u
 
 
 ## Perform an app-level backup -->
-
