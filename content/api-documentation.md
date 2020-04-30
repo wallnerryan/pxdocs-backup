@@ -11,9 +11,11 @@ highlight_theme: darkula
 headingLevel: 2
 ---
 
-You can use the PX-Backup API to create, schedule, and restore backups.
+You can use the PX-Backup API to create, delete, schedule, and restore backups. The PX-Backup API is organized around REST and returns responses in JSON format.
 
-## Create creates a new backup object
+## Create
+
+_Implementation notes:_ Creates a new backup object
 
 <a id="opIdBackup_Create"></a>
 
