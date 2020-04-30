@@ -10,6 +10,15 @@ series: backup
 
 ## 1.0
 
+April 30, 2020
+
+### New features
+
+ * Announcing PX-Backup, a Kubernetes a Kubernetes backup solution that allows you to back up and restore applications and their data across multiple clusters.
+
+<!-- 
+## 1.0
+
 Month day, 2020
 
 ### New features
@@ -36,4 +45,4 @@ Portworx, Inc. has fixed the following issues:
 Portworx, Inc. is aware of the following issues, check future release notes for fixes:
 
 |**Issue Number**|**Issue Description**|**Workaround**|
-|----|----|----|
+|----|----|----| -->

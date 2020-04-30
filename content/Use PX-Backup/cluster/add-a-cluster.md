@@ -7,15 +7,40 @@ hidesections: true
 disableprevnext: true
 ---
 
-Once you’ve installed PX-Backup, you’re ready to add any clusters you’d like to back up and restore to. How you prepare your cluster differs on its environment. 
+Once you’ve installed PX-Backup, you’re ready to add any clusters you’d like to back up and restore to. How you prepare your cluster differs based on its environment. 
+
+## Portworx clusters
+
+If your cluster is running on Portworx, you don't need to do anything. Portworx includes Stork, allowing PX-Backup to take backups and restore them onto your cluster with no additional configuration. 
+<!-- not so sure about this. True? -->
 
 ## AWS with EBS
 
+Create an IAM role with the following permissions:
 
+* `ec2:CreateSnapshot`
+* `ec2:CreateSnapshots`
+* `ec2:DeleteSnapshot`
+* `ec2:DescribeSnapshots`
+
+<!-- this may need to be moved to credentials creation topic -->
+{{<info>}}
+**NOTE:** When you try to create a backup using the specified cloud account, make sure either the bucket is already created, or the credentials include permission to create the bucket
+{{</info>}}
 
 ## Azure with managed disks
 
+Azure does not require you to add credentials for the cluster in PX-Central. Instead, set environment variables on your cluster for Stork containing your tenant ID, client ID, and client secret:
+
+```text
+kubectl create secret generic -n kube-system px-azure --from-literal=AZURE_TENANT_ID=<tenant> \
+                                                      --from-literal=AZURE_CLIENT_ID=<appId> \
+                                                      --from-literal=AZURE_CLIENT_SECRET=<password>
+```
+
 ## GCP with persistent disks
+
+
 
 ### enable permissions
 

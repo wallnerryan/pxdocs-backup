@@ -40,3 +40,6 @@ disableprevnext: true
     * **Disable SSL**: 
 
     ![configre backup location](/img/config-backup-location.png)
+
+
+    make sure either the bucket is already created, or the credentials include permission to create the bucket

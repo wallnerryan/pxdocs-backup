@@ -9,4 +9,4 @@ scrollspy-container: false
 type: common-landing
 ---
 
-use credentials with backups and with clusters
+Credentials allow PX-Backup to authenticate with clusters for the purpose of taking backups and restoring to them, as well as with backup locations where backup objects are stored. 
