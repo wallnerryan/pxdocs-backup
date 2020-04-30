@@ -18,7 +18,9 @@ disableprevnext: true
         4. From the **Cloud Account** dropdown, select the cloud account you previously created.
         5. Select the **Submit** button
 
-2. Set environment variables on your cluster for Stork containing your Azure tenant ID, client ID, and client secret:
+        ![](/img/aws-cluster-add.png)
+
+2. On your cluster, set environment variables for Stork containing your Azure tenant ID, client ID, and client secret:
 
     ```text
     kubectl create secret generic -n kube-system px-azure --from-literal=AZURE_TENANT_ID=<tenant> \

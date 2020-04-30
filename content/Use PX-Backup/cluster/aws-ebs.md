@@ -7,7 +7,7 @@ hidesections: true
 disableprevnext: true
 ---
 
-1. Create an IAM role with the following permissions:
+1. In AWS, create an IAM role with the following permissions:
 
     * `ec2:CreateSnapshot`
     * `ec2:CreateSnapshots`
@@ -28,6 +28,8 @@ disableprevnext: true
     5. In the **Secret Key** field, add your S3 secret access key
     6. Select the **Add** button
 
+    ![](/img/aws-credential.png)
+
 3. Add the cluster to PX-Backup:
 
     Now that you've added the cloud account to PX-Backup, it can authenticate with your cluster on AWS and perform the operations necessary for backup tasks. 
@@ -41,3 +43,4 @@ disableprevnext: true
         * From the **Cloud Account** dropdown, select the cloud account you previously created.
         * Select the **Submit** button
 
+        ![](/img/aws-cluster-add.png)

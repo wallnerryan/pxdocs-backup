@@ -17,7 +17,7 @@ When creating your cluster on GKE:
 Once the cluster has deployed:
 
 1. Get the service account key associated with your cluster:
-    1 .get this from GCP dashboard: **IAM & Admin** > **IAM** > **Service Accounts** > **Actions...** > **Create Key** > JSON key type
+    1. get this from GCP dashboard: **IAM & Admin** > **IAM** > **Service Accounts** > **Actions...** > **Create Key** > JSON key type
     download the JSON key
 
 2. Add the cloud account to PX-Backup:

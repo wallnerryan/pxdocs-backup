@@ -16,6 +16,8 @@ disableprevnext: true
     4. From the **Cloud Account** dropdown, select the cloud account you previously created.
     5. Select the **Submit** button
 
+    ![](/img/kubernetes-cluster-add.png)
+
 {{<info>}}
 **NOTE:** Your cluster must be running Stork 2.4 or higher. Copy and paste the command located under the **Cluster name** field if necessary.
 {{</info>}}
