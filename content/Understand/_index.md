@@ -9,7 +9,7 @@ type: common-landing
 series: backup
 ---
 
-PX-Backup is a Kubernetes backup solution that allows you to back up and restore applications and their data across multiple clusters. PX-Backup is a component of PX-Central, allowing you or any other approved users to manage multiple clusters and their backups from a single UI. Under this principle of multitenancy, authorized users connect through OIDC to create and manage backups for clusters and apps which they have permissions without needing to go through an administrator. 
+PX-Backup is a Kubernetes backup solution that allows you to back up and restore applications and their data across multiple clusters. PX-Backup works with PX-Central, allowing you or any other approved users to manage multiple clusters and their backups from a single UI. Under this principle of multitenancy, authorized users connect through OIDC to create and manage backups for clusters and apps which they have permissions without needing to go through an administrator. 
 
 PX-Backup is compatible with any Kubernetes cluster, including managed and cloud deployments, and does not require PX-Enterprise to be installed. 
 PX-Backup integrates with major block storage providers:
