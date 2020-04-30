@@ -7,12 +7,47 @@ hidesections: true
 disableprevnext: true
 ---
 
-Once you’ve installed PX-Backup, you’re ready to add any clusters you’d like to back up and restore to. How you prepare your cluster differs based on its environment. 
+Once you’ve installed PX-Backup, you’re ready to add any clusters you’d like to back up from and restore to. How you prepare your cluster differs based on its environment. If you're using a cloud-based kubernetes cluster, you must configure permissions on your cloud provider before adding it to PX-Backup.
 
 ## Portworx clusters
 
 If your cluster is running on Portworx, you don't need to do anything. Portworx includes Stork, allowing PX-Backup to take backups and restore them onto your cluster with no additional configuration. 
 <!-- not so sure about this. True? -->
+
+## GCP with persistent disks
+
+Modify the node security settings, Create a cluster role with compute engine read/write access. 
+
+When creating your cluster on GKE:
+    under **NODE POOLS** > **Node security**, select a service account; the Compute Engine default service account is sufficient.
+    Under **Access scopes** within the **Node security** page, select the **Set access for each API** option. Under the **Compute Engine** dropdown, select **Read Write** 
+
+Once the cluster has deployed:
+
+Get the service account key associated with your cluster:
+    get this from GCP dashboard: **IAM & Admin** > **IAM** > **Service Accounts** > **Actions...** > **Create Key** > JSON key type
+    download the JSON key
+
+add the cloud account to PX-Backup:
+    Add new credentials in PX-Backup, under cloud settings, add a new **Cloud Account**.
+    Choose **Google Cloud**
+    Create a descriptive account name
+    add the JSON key for the service account associated with your GKE cluster
+    Select the **Add** button
+
+add the cluster to PX-Backup
+    Now that you've added the cloud account to PX-Backup, it can authenticate with your cluster on GCP and perform the operations necessary for backup tasks. 
+    In PX-Backup, Select **Add Cluster**
+    From this page, enter the cluster details
+        Name the cluster
+        Retrieve the Kubeconfig from your cluster and paste it in the **Kubeconfig** text frame
+        Select the **GKE** radio button from the **Kubernetes Service** 
+        from the **Cloud Account** dropdown, select the cloud account you previously created.
+        Select the **Submit** button
+
+{{<info>}}
+**NOTE:** Your cluster must be running Stork 2.4 or higher. Copy and paste the command located under the **Cluster name** field if necessary.
+{{</info>}}
 
 ## AWS with EBS
 
@@ -23,6 +58,24 @@ Create an IAM role with the following permissions:
 * `ec2:DeleteSnapshot`
 * `ec2:DescribeSnapshots`
 
+add the cloud account to PX-Backup:
+    Add new credentials in PX-Backup, under cloud settings, add a new **Cloud Account**.
+    Choose **AWS / S3 Compliant Object Store**
+    Enter a descriptive account name
+    In the **Public Key** field, add your S3 access key ID
+    In the **Secret Key** field, add your S3 secret access key
+    Select the **Add** button
+
+add the cluster to PX-Backup
+    Now that you've added the cloud account to PX-Backup, it can authenticate with your cluster on AWS and perform the operations necessary for backup tasks. 
+    In PX-Backup, Select **Add Cluster**
+    From this page, enter the cluster details
+        Name the cluster
+        Retrieve the Kubeconfig from your cluster and paste it in the **Kubeconfig** text frame
+        Select the **EKS** radio button from the **Kubernetes Service** 
+        from the **Cloud Account** dropdown, select the cloud account you previously created.
+        Select the **Submit** button
+
 <!-- this may need to be moved to credentials creation topic -->
 {{<info>}}
 **NOTE:** When you try to create a backup using the specified cloud account, make sure either the bucket is already created, or the credentials include permission to create the bucket
@@ -30,7 +83,7 @@ Create an IAM role with the following permissions:
 
 ## Azure with managed disks
 
-Azure does not require you to add credentials for the cluster in PX-Central. Instead, set environment variables on your cluster for Stork containing your tenant ID, client ID, and client secret:
+Set environment variables on your cluster for Stork containing your tenant ID, client ID, and client secret:
 
 ```text
 kubectl create secret generic -n kube-system px-azure --from-literal=AZURE_TENANT_ID=<tenant> \
@@ -38,17 +91,13 @@ kubectl create secret generic -n kube-system px-azure --from-literal=AZURE_TENAN
                                                       --from-literal=AZURE_CLIENT_SECRET=<password>
 ```
 
-## GCP with persistent disks
 
 
 
-### enable permissions
-
-1. Create a kubernetes cluster on GCP
-2. go to the security tab, under access scope, set access for each api
-3. give it read/write access for compute engine
 
 ### add the cloud account
+
+2. go to the security tab, under access scope, set access for each api
 
 GCP
 
