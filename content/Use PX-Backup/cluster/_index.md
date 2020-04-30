@@ -1,5 +1,5 @@
 ---
-title: cluster
+title: Add clusters
 description: Add clusters to PX-Central and configure them for use with PX-Backup.
 keywords: 
 weight: 2
