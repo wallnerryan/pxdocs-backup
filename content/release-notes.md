@@ -14,7 +14,7 @@ April 30, 2020
 
 ### New features
 
- * Announcing PX-Backup, a Kubernetes a Kubernetes backup solution that allows you to back up and restore applications and their data across multiple clusters.
+ * Announcing PX-Backup, a Kubernetes backup solution that allows you to back up and restore applications and their data across multiple clusters.
 
 <!-- 
 ## 1.0

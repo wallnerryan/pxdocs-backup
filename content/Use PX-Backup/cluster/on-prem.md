@@ -1,13 +1,11 @@
 ---
-title: Add a cluster
+title: On-premises Kubernetes clusters
 description: 
 keywords: 
 weight: 3
 hidesections: true
 disableprevnext: true
 ---
-
-## On-premises Kubernetes clusters
 
 In PX-Backup, Select **Add Cluster**
 From this page, enter the cluster details

@@ -1,13 +1,11 @@
 ---
-title: Add a cluster
+title: GCP with persistent disks
 description: 
 keywords: 
 weight: 3
 hidesections: true
 disableprevnext: true
 ---
-
-## GCP with persistent disks
 
 Modify the node security settings, Create a cluster role with compute engine read/write access. 
 
