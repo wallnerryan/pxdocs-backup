@@ -10,8 +10,9 @@ series: backup
 
 ## Prerequisites
 
-* Minimum versions: stork 2.4.0, PX-Enterprise 2.5.0
-* Refer to the PX-Central prerequisites for further requirements
+* Stork 2.4.0 or newer
+* PX-Enterprise 2.5.0 or newer
+* PX-Central. Refer to the [Install PX-Central on-premises](https://docs.portworx.com/portworx-install-with-kubernetes/operate-and-maintain-on-kubernetes/pxcentral-onprem/install-pxcentral/) page for details.
 
 {{<info>}}
 **NOTE:** PX-Backup does not support the following Portworx features:
