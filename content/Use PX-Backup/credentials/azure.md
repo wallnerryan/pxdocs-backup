@@ -14,9 +14,15 @@ series2_weight: 2
 
 Perform the following steps to add an Azure cloud account to PX-Backup:
     
-1. Add new credentials in PX-Backup, under cloud settings, add a new **Cloud Account**.
+1. From the home page, select **Settings**, **Cloud Settings** to open the cloud settings page.
 
-2. Populate the fields in the **Add Cloud Account** page:
+    ![cloud settings](/img/cloud-settings.png)
+
+2. Under the **Cloud Accounts** section, select **Add New**.
+
+    ![add new cloud account](/img/add-new.png)
+
+3. Populate the fields in the **Add Cloud Account** page:
     
     * Choose **Azure**
     * Enter a descriptive account name
@@ -29,5 +35,5 @@ Perform the following steps to add an Azure cloud account to PX-Backup:
 
     ![](/img/azure-credential.png)
 
-3. Select the **Add** button
+4. Select the **Add** button
 
