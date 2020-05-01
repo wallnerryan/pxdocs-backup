@@ -25,7 +25,7 @@ PX-Backup includes:
 * Continuous backups across multiple clouds and global data centers
 * Complete protection for applications, configurations, and data
 * Application-consistent backup and restore
-* Backup and recover cloud volumes from Amazon, Microsoft, and Google, even if you are not using PX-Store
+* Backup and recover cloud volumes from AWS, Azure, and GCP, even if you are not using PX-Store
 * Built-in multi-tenancy for enterprises via industry-standard OIDC integration
 
 <!-- 
