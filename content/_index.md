@@ -9,4 +9,4 @@ scrollspy-container: false
 type: common-landing
 ---
 
-I'm a page
+I'm a page.
