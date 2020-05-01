@@ -44,7 +44,7 @@ PX-Backup provides namespace and label selectors, allowing you to create granula
 
 You can schedule backups by creating an independent schedule policy that defines when backups run and how many rolling copies they keep, and you can associate this schedule policy with as many backups as you want. 
 
-Avoid tedious prep-work and minimize interruptions to your cluster associated with backup tasks by creating rules that run before and after backups are taken. As with schedule policies, you can associate rules with multiple backups. 
+Avoid manual prep-work and minimize interruptions to your cluster associated with backup tasks by creating rules that run before and after backups are taken. As with schedule policies, you can associate rules with multiple backups. 
 
 ## PX-Backup components
 
@@ -77,12 +77,12 @@ Create schedule policies and attach them to backups to run them at designated ti
 
 ### Rules 
 
-Create commands which run before or after a backup operation is performed. Specify labels.
+Use rules to create commands which run before or after a backup operation is performed.
 
 ### Application view
 
 <!-- This doesn't really fit here, need to find a better place -->
-You interact with PX-Backup through a central application view. From here, you can see all of the resources currently on your cluster, filter them by namespace and labels, and create a backup. 
+You can interact with PX-Backup through a central application view. From here, you can see all of the resources currently on your cluster, filter them by namespace and labels, and create a backup. 
 
 ## Get Started
 
@@ -92,3 +92,5 @@ Perform the following tasks to get started with PX-Backup and perform your first
 2. [Add a cluster](/use-px-backup/cluster/)
 3. [Configure backup locations](/configure-backup-locations)
 4. [Perform a backup](/perform-backup)
+
+<!-- {{<homelist series2="get-started">}} -->
