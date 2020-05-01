@@ -7,8 +7,6 @@ hidesections: true
 disableprevnext: true
 ---
 
-<!-- AKS starts at 28:34 -->
-
 1. add the cluster to PX-Backup
     1. In PX-Backup, Select **Add Cluster**
     2. From this page, enter the cluster details:
