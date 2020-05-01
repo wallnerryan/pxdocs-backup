@@ -5,6 +5,7 @@ keywords:
 weight: 5
 hidesections: true
 disableprevnext: true
+series2: get-started
 ---
 
 Once you’ve created any backup rules and schedule policies you want, you can use them to create a backup. 
@@ -13,7 +14,7 @@ Once you’ve created any backup rules and schedule policies you want, you can u
 
     ![](/img/select-backup.png)
 
-2. Select the namespace and any labels you want to back up:
+2. Select the namespaces and apply label selectors to filter the resources you want to back up:
 
     ![](/img/select-namespace-labels.png)
 
@@ -25,13 +26,14 @@ Once you’ve created any backup rules and schedule policies you want, you can u
     
     * **Backup name**: the name of the backup you want displayed in the PX-Backup UI
     * **Destination location**: which bucket you want to store your backups onto
-    * **Schedule**: run the backup immediately or choose a schedule rule to associate with this backup
+    * **Now** or **Schedule**: run the backup immediately or choose a schedule policy to associate with this backup
     * **Pre-exec rule**: any rules you want to execute before the backup runs
     * **Post-exec rule**: any rules you want to execute after the backup runs
     * **Backup labels**: any labels you want to attach to the backup once it's created
 
     ![](/img/populate-backup-fields.png)
 
+Once you've created your backup, you can [monitor its status](/use-px-backup/backup-restore/monitor-status).
 
 <!-- 
 ## Perform a namespace-level backup

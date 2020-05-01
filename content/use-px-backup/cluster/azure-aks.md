@@ -1,5 +1,5 @@
 ---
-title: Azure AKS
+title: AKS
 description: 
 keywords: 
 weight: 3
@@ -13,10 +13,9 @@ disableprevnext: true
         1. Name the cluster
         2. Retrieve the Kubeconfig from your cluster and paste it in the **Kubeconfig** text frame
         3. Select the **Others** radio button from the **Kubernetes Service** 
-        4. From the **Cloud Account** dropdown, select the cloud account you previously created.
-        5. Select the **Submit** button
+        4. Select the **Submit** button
 
-        ![](/img/aws-cluster-add.png)
+        ![](/img/azure-cluster-add.png)
 
 2. On your cluster, set environment variables for Stork containing your Azure tenant ID, client ID, and client secret:
 

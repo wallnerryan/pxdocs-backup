@@ -1,5 +1,5 @@
 ---
-title: GCP GKE
+title: GKE
 description: 
 keywords: 
 weight: 3
@@ -7,16 +7,7 @@ hidesections: true
 disableprevnext: true
 ---
 
-1. In GCP, create a **Compute Engine default** service account for use with your cluster. Modify the service account, adding **Read Write** access for each API. Save the JSON key for this service account for future reference.
 
-2. Add the cloud account to PX-Backup:
-    1. Add new credentials in PX-Backup, under cloud settings, add a new **Cloud Account**.
-    2. Choose **Google Cloud**
-    3. Create a descriptive account name
-    add the JSON key for the service account associated with your GKE cluster
-    4. Select the **Add** button
-
-    ![](/img/gcp-account-add.png)
 
 3. Add the cluster to PX-Backup
     1. Now that you've added the cloud account to PX-Backup, it can authenticate with your cluster on GCP and perform the operations necessary for backup tasks. 

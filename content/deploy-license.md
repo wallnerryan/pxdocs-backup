@@ -6,7 +6,9 @@ hidesections: true
 disableprevnext: true
 ---
 
-PX-Backup licenses are managed through PX-Central. Perform the following steps to add your license: 
+PX-Backup licenses are managed through PX-Central. By default PX-Backup includes a 30 day trial license. Contact [Portworx support](mailto:support@portworx.com) to purchase an enterprise license.
+
+Perform the following steps to add your license: 
 
 1. From the PX-Central dashboard, select the license icon on the left side of the screen:
 

@@ -1,5 +1,5 @@
 ---
-title: AWS
+title: AWS/S3 compliant object store
 description: 
 keywords: 
 weight: 1

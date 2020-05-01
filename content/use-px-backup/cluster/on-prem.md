@@ -1,5 +1,5 @@
 ---
-title: On-premises Kubernetes clusters
+title: Other Kubernetes distributions
 description: 
 keywords: 
 weight: 3
@@ -13,7 +13,6 @@ disableprevnext: true
     1. Name the cluster
     2. Retrieve the Kubeconfig from your cluster and paste it in the **Kubeconfig** text frame
     3. Select the **Others** radio button from the **Kubernetes Service** 
-    4. From the **Cloud Account** dropdown, select the cloud account you previously created.
     5. Select the **Submit** button
 
     ![](/img/kubernetes-cluster-add.png)

@@ -1,8 +1,8 @@
 ---
-title: Create a backup schedule
+title: Create schedule policies
 description: 
 keywords: 
-weight: 1
+weight: 4
 hidesections: true
 disableprevnext: true
 scrollspy-container: false
@@ -24,5 +24,9 @@ type: common-landing
     * **Weekly**: Runs once a week on the specified day and time.
     * **Monthly**: runs on a specified day of the month. If the day given is longer than the current month, it will roll over to the next month. 
     * **Retain**: Select the number of backups to retain concurrently
+
+    {{<info>}}
+**NOTE:** All policy schedules are executed on the connected application cluster's local time zone.
+    {{</info>}}
 
     ![](/img/policy-dialogue.png)

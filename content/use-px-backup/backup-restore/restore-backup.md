@@ -1,5 +1,5 @@
 ---
-title: Restore a backup
+title: Restore from a backup
 keywords: 
 weight: 6
 hidesections: true
@@ -8,28 +8,42 @@ disableprevnext: true
 
 You can restore backups to the cluster you created it from, or to a new cluster. 
 
-1. From the PX-Central home screen, select the PX-Backup icon on the left menu bar. The PX-Backup screen shows all of your backup operations divided into three categories: failed, in-progress, success.
-    <!-- This is the dashboard view. Restores can also be triggered from the px-backup/<application cluster> screen as well. 
-    Also there is an "All backups" link now from which you can list all the backups in the bucket mentioned in the backup location. You can restore from the enteries here as well. -->
+1. From the PX-Central home screen, Select the **Backup** button associated with your cluster:
 
-    ![](/img/backup-menu.png)
+    ![](/img/cluster-backups.png)
 
-2. Select the vertical menu icon from the successful backup you wish to restore, followed by the **Restore** option.
+    <!-- ![](/img/backup-menu.png) -->
+    
+    <!-- The PX-Backup dashboard shows all of your backup operations divided into three categories: failed, in-progress, success. 
 
-    ![](/img/select-backup-restore.png)
+    Alternatively, select the  **All backups** link now from which you can list all the backups available across your backup locations. You can restore from the enteries here as well. -->
 
-3. From the dialog box, specify the following:
+    <!-- ![](/img/restore-all.png) -->
+
+    <!-- Select the **Backup** button associated with your cluster: -->
+
+    <!-- ![](/img/cluster-backups.png) -->
+    
+    <!-- Each cluster shows a list of all the backups created with an option to view the details and restore the backup -->
+
+2. Select the **Backups** tab to view a list of all the backups:
+
+3. Select the vertical menu icon from the successful backup you wish to restore, followed by the **Restore** option.
+
+    ![](/img/select-backups.png)
+
+4. From the dialog box, specify the following:
     
     * **Name**: name your restore object. You’ll use this to identify the restore operation in the PX-Central UI.
     * **Destination cluster**: select the cluster you want to restore your backup to. This can be a different cluster from where the backup occurred.
-    * **Default or Custom restore**: 
-        <!-- Custom restore allows the user to map the namespaces between their source and destination cluster. They can choose to restore it to a new namespace (different from the source cluster) -->
-        * Under a default restore, PX-Backup restores backups to the same namespace they were taken from
-        * You can deselect source namespaces using the checkbox on the left. If you deselect a namespace, content from that namespace will not be restored. 
-    * **Dest namespace**: specify a namespace on the target cluster you want to restore this backup to
-    * **Replace existing resources**: replaces any matching existing resources with the content from this backup. Note that this does not replace any existing resources on other namespaces.
+    * **Default restore**: PX-Backup restores backups to the same namespaces they were taken from.
+    * **Custom restore**: You can deselect source namespaces using the checkbox on the left. If you deselect a namespace, content from that namespace will not be restored. 
+        * **Dest namespace**: specify a namespace on the target cluster you want to restore this backup to. If the namespace does not exist, PX-Backup will try to create it.
+    * **Replace existing resources**: replaces any matching existing resources with the content from this backup.
 
     ![](/img/restore-custom.png)
+
+Once you've restored your backup, you can [monitor its status](/use-px-backup/backup-restore/monitor-status).
 
 <!-- 
 ## Search for set of backups based on dates and restore from them
