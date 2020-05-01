@@ -6,4 +6,20 @@ hidesections: true
 disableprevnext: true
 ---
 
-PX-Backup licenses are managed through PX-Central. Follow the steps in the [PX-Central](https://docs.portworx.com/portworx-install-with-kubernetes/operate-and-maintain-on-kubernetes/pxcentral-onprem/configure-license-server/) documentation to add and manage your PX-Backup license.
+PX-Backup licenses are managed through PX-Central. Perform the following steps to add your license: 
+
+1. From the PX-Central dashboard, select the license icon on the left side of the screen:
+
+    ![](/img/license-select.png)
+
+2. Under the **License Entitlements** section, select **Details**:
+
+    ![](/img/license-entitlements.png)
+
+3. Select the **Import License** button:
+
+    ![](/img/import-license.png)
+
+4. In the dialogue box, paste your key or upload your key file and select the **Import License** button:
+
+    ![](/img/license-key.png)

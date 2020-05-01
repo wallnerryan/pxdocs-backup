@@ -1,5 +1,5 @@
 ---
-title: AWS with EBS
+title: AWS EKS
 description: 
 keywords: 
 weight: 3

@@ -1,5 +1,5 @@
 ---
-title: Azure with managed disks
+title: Azure AKS
 description: 
 keywords: 
 weight: 3

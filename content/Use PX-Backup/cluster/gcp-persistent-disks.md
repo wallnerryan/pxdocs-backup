@@ -1,5 +1,5 @@
 ---
-title: GCP with persistent disks
+title: GCP GKE
 description: 
 keywords: 
 weight: 3

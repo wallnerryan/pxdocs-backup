@@ -28,3 +28,4 @@ Backup rules:
 * A pod selector allows you to specify any label for pods in your cluster. You can use these with operators to include or exclude pods from your sub-rule. 
 * Actions allow you to specify commands you want to run.
 
+Follow the tasks in this section to create and restore backups. 
