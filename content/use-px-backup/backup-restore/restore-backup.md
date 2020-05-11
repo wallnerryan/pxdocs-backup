@@ -45,6 +45,12 @@ You can restore backups to the cluster you created it from, or to a new cluster.
 
 Once you've restored your backup, you can [monitor its status](/use-px-backup/backup-restore/monitor-status).
 
+### How to perform a restore
+
+#### Perform restore of Kubernetes applications across clusters
+
+  {{< youtube EU-WGNaH7p0 >}}
+
 <!-- 
 ## Search for set of backups based on dates and restore from them
 
