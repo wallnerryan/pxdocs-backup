@@ -35,13 +35,9 @@ Once you’ve created any backup rules and schedule policies you want, you can u
 
 Once you've created your backup, you can [monitor its status](/use-px-backup/backup-restore/monitor-status).
 
-### How to perform a backup
-
-#### Perform backup and restore of Kubernetes applications using Portworx
+### Related Videos
 
   {{< youtube dhXwL9kOC0A >}}
-
-#### Perform backup and restore of Kubernetes applications using Cloud Storage
 
   {{< youtube 0N5axHG_QBc >}}
 
