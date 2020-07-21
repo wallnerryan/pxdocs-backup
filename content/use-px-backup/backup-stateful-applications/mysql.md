@@ -52,10 +52,18 @@ To accomplish this, we can implement a `FLUSH TABLES WITH READ LOCK` command in 
 Since PX-Backup performs a snapshot of the persistent volume in Kubernetes, this will accomplish what we are looking for.
 
 {{<info>}}
-Note: We set this rule to run in the background, which requires a `WAIT_CMD` to allow the rule to execute and exit properly.
+Note: Set this rule to run in the background, which requires a `WAIT_CMD` to allow the rule to execute and exit properly.
 {{</info>}}
 
 Create the following rule within the PX-Backup interface. You may need to modify the username and password depending on how MySQL is configured in your Kubernetes environment.
+
+1. Navigate to **Settings** → **Rules** → **Add New**.
+2. Add a name for your Rule.
+3. Add the app label
+
+`app=mysql`
+
+4. Add the Action
 
 ```bash
 mysql --user=root --password=$MYSQL_ROOT_PASSWORD -Bse 'FLUSH TABLES WITH READ LOCK;system ${WAIT_CMD};'
@@ -68,10 +76,18 @@ mysql --user=root --password=$MYSQL_ROOT_PASSWORD -Bse 'FLUSH TABLES WITH READ L
 Since we made sure to flush and lock data from MySQL before our backup, we must make sure to `UNLOCK` the database from the global read lock. MySQL documentation tells us that this is because global locks are not implicitly unlocked after the `FLUSH TABLES WITH READ LOCK` operation. It also may be a good idea to `FLUSH LOGS`, which “Closes and reopens any log file to which the server is writing” and updates the sequence number of the log. This may be required if users need a clear distinction between logs before and after a backup occurs. Flushing logs is optional here but will add it to our post- backup rule for completeness.
 
 {{<info>}}
-Note: Post- backup rules are not allowed to run in the background, so a WAIT_CMD is not needed.
+Note: Post- backup rules are not allowed to run in the background, a WAIT_CMD is not needed.
 {{</info>}}
 
 Create the following rule within the PX-Backup interface. You may need to modify the username and password depending on how MySQL is configured in your Kubernetes environment.
+
+1. Navigate to **Settings** → **Rules** → **Add New**.
+2. Add a name for your Rule.
+3. Add the app label
+
+`app=mysql`
+
+4. Add the Action
 
 ```bash
 mysql --user=root --password=$MYSQL_ROOT_PASSWORD -Bse 'FLUSH LOGS; UNLOCK TABLES;'
@@ -81,7 +97,7 @@ mysql --user=root --password=$MYSQL_ROOT_PASSWORD -Bse 'FLUSH LOGS; UNLOCK TABLE
 
 ### Use the rules during backup of MySQL
 
-To use the MySQL pre- and post- backup rules, select them as your pre-exec rule and post-exec rule when filling out the backup from in the PX-Backup interface. An example of what this looks like is below.
+To use the MySQL pre- and post- backup rules, select them as your **pre-exec** rule and **post-exec** rule when filling out the backup from in the PX-Backup interface. An example of what this looks like is below.
 
 ![](/img/mysql-use-rules.png)
 

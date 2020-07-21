@@ -37,13 +37,17 @@ For more information on how to run Cassandra on Kubernetes, read [this article][
 Cassandra pods must also be using the `app=cassandra` label.
 {{</info>}}
 
+{{<info>}}
+This example uses the cassandra keyspace `newkeyspace` as an example. If you wish to use this rule for another keyspace, simply replace keyspace within this document with your own.
+{{</info>}}
+
 ### Create rules for Cassandra
 
 #### Create a pre- backup rule for Cassandra
 
 Create a rule that will run `nodetool flush` for our `newkeyspace` before our backup. This is essential as Portworx will take a snapshot of the backing volume before it places that data in the backup target.
 
-1. Navigate to Settings → Rules → Add New.
+1. Navigate to **Settings** → **Rules** → **Add New**.
 2. Add a name for your Rule.
 3. Add the app label
 
@@ -59,7 +63,7 @@ Create a rule that will run `nodetool flush` for our `newkeyspace` before our ba
 
 A post-exec backup rule for Cassandra isn't as necessary as the pre-exec backup rule above, however, for completeness in production and to verify the keyspace is no corrupt after the backup occurs we will create a rule that runs `nodetool verify`. The verify command will verify (check data checksums for) one or more tables.
 
-1. Navigate to Settings → Rules → Add New.
+1. Navigate to **Settings** → **Rules** → **Add New**.
 2. Add a name for your Rule.
 3. Add the app label
 
@@ -73,7 +77,7 @@ A post-exec backup rule for Cassandra isn't as necessary as the pre-exec backup 
 
 ### Use the rules during backup of Cassandra
 
-To use the Cassandra pre- and post- backup rules, select them as your pre-exec rule and post-exec rule when filling out the backup from in the PX-Backup interface. An example of what this looks like is below.
+To use the Cassandra pre- and post- backup rules, select them as your **Pre-exec** rule and **post-exec** rule when filling out the backup from in the PX-Backup interface. An example of what this looks like is below.
 
  ![](/img/cassandra-use-rules.png)
 
