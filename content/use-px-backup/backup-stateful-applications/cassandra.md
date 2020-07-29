@@ -7,7 +7,7 @@ hidesections: true
 disableprevnext: true
 ---
 
-This page provides instructions for users on how to use pre- and post- backup rules with PX-Backup to achieve application consistent backups for Cassandra in production.
+This page provides instructions for users on how to use pre and post backup rules with PX-Backup to achieve application-consistent backups for Cassandra in production.
 
 ## Background
 
@@ -81,7 +81,7 @@ A post-exec backup rule for Cassandra isn't as necessary as the pre-exec backup 
 
 ### Use the rules during backup of Cassandra
 
-During the backup creation process, select the rules in the **pre-exec** and **post-exec**drop downs. An example of what this looks like is below:
+During the backup creation process, select the rules in the **pre-exec** and **post-exec** drop downs. An example of what this looks like is below:
 
  ![](/img/cassandra-use-rules.png)
 
