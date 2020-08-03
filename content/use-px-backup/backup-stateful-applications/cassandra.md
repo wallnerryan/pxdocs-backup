@@ -23,7 +23,7 @@ Cassandra provides an internal snapshot mechanism to take backups with a tool ca
 
 However, disadvantages of this include the fact that you must run `nodetool` on each and every Cassandra node, and it keeps data locally, increasing the overall storage footprint. Portworx, Inc. suggests taking a backup of the Cassandra PVs at a block level and storing them in a space-efficient object storage target. Portworx allows you to combine techniques that are recommended by Cassandra, such as flushing data to disk with pre and post hooks into the application to give users Kubernetes-native and efficient backups of Cassandra data.
 
-PX-Backup allows application owners to set up pre and post hook rules that will be applied before and or after a backup occurs. For Cassandra, users can create a custom flush, compaction, or verify rule to ensure a healthy and consistent dataset before and after a backup occurs. Rules can run on one or all pods associated with Cassandra which is often a requirement for nodetool commands. 
+PX-Backup allows you to set up pre and post hook rules that will be applied before and or after a backup occurs. For Cassandra, users can create a custom flush, compaction, or verify rule to ensure a healthy and consistent dataset before and after a backup occurs. Rules can run on one or all pods associated with Cassandra which is often a requirement for nodetool commands. 
 
 For more information on how to run Cassandra on Kubernetes, refer to the [Cassandra on Kubernetes on Portworx](https://docs.portworx.com/portworx-install-with-kubernetes/application-install-with-kubernetes/cassandra/) article.
 
