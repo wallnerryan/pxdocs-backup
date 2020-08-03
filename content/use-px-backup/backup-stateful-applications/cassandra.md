@@ -11,7 +11,7 @@ This page provides instructions for users on how to use pre and post backup rule
 
 ## Background
 
-Cassandra is resilient to node failures. However, Cassandra backups are still necessary to recover from following scenarios:
+On its own, Cassandra is resilient to node failures. However, you still need Cassandra backups to recover from the following scenarios:
 
 * Unauthorized deletions
 * Major failure’s that require a rebuild your entire cluster
