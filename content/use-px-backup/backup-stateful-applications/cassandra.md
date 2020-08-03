@@ -65,7 +65,7 @@ A post-exec backup rule for Cassandra isn't as necessary as the pre-exec backup 
 
 1. Navigate to **Settings** → **Rules** → **Add New**.
 2. Add a name for your Rule.
-3. Add the app label
+3. Add the app label:
 
 	```text
 	app=cassandra
