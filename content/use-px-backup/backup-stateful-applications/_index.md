@@ -1,6 +1,6 @@
 ---
 title: Backup Stateful Applications
-description: how to use pre- and post- backups rules with PX-Backup 
+description: how to use pre- and post-backup rules with PX-Backup 
 keywords: 
 weight: 3
 disableprevnext: true
