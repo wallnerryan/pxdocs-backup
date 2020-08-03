@@ -71,7 +71,7 @@ A post-exec backup rule for Cassandra isn't as necessary as the pre-exec backup 
 	app=cassandra
 	```
 
-4. Add the Action
+4. Add the Action:
 
 	```text
 	nodetool verify -- <your-cassandra-keyspace>;
