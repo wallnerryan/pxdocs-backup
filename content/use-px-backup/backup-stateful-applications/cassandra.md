@@ -19,7 +19,7 @@ On its own, Cassandra is resilient to node failures. However, you still need Cas
 * Point in time rollbacks
 * Disk failure
 
-Cassandra provides an internal snapshot mechanism to take backups with a tool called nodetool. This can be set up to provide incremental or full snapshot-based backups of the data on the node. This tool will flush data from memtables to disk and create a hardlink to the SSTables file on the node.
+Cassandra provides an internal snapshot mechanism to take backups with a tool called `nodetool`. You can configure this to provide incremental or full snapshot-based backups of the data on the node. `nodetool` will flush data from `memtables` to disk and create a `hardlink` to the SSTables file on the node.
 
 However, disadvantages of this include the fact that `nodetool` must be run on each and every Cassandra node and data is kept locally increasing the overall storage footprint.  Portworx suggests taking a backup of the Cassandra PVs at a block level and to store them in a space efficient object storage target. Portworx allows you to combine techniques that are recommended by Cassandra such as flushing data to disk with pre and post hooks into the application to give users Kubernetes-native and efficient backups of Cassandra data.
 
