@@ -7,7 +7,7 @@ hidesections: true
 disableprevnext: true
 ---
 
-This page provides instructions for users on how to use pre and post backup rules with PX-Backup to achieve application-consistent backups for Cassandra in production.
+This page provides instructions for users on how to use pre- and post-backup rules with PX-Backup to achieve application-consistent backups for Cassandra in production.
 
 ## Background
 
