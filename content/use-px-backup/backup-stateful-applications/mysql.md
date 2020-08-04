@@ -99,7 +99,7 @@ Create the following rule within the PX-Backup interface. Modify the username an
 
 ### Use the rules during backup of MySQL
 
-During the backup creation process, select the rules in the **pre-exec** and **post-exec** drop downs. An example of what this looks like is below:
+During the backup creation process, select the rules in the **pre-exec** and **post-exec** drop downs:
 
 ![](/img/mysql-use-rules.png)
 
