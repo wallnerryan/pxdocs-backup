@@ -59,7 +59,7 @@ Create a rule that will run `nodetool flush` for our `newkeyspace` before the ba
 	nodetool flush -- <your-cassandra-keyspace>;
 	```
 
- ![](/img/cassandra-pre-rule.png)
+	![](/img/cassandra-pre-rule.png)
 
 #### Create a post- backup rule for Cassandra
 
