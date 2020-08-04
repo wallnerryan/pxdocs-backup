@@ -34,7 +34,9 @@ For more information on how to run MySQL on Kubernetes, refer to [this article](
 
 {{% content "shared/common-info.md" %}}
 
+{{<info>}}
 **NOTE:** MySQL pods must also be using the `app=mysql` label.
+{{</info>}}
 
 ### Create rules for MySQL
 
