@@ -68,7 +68,7 @@ Create the following rule within the PX-Backup interface. Modify the username an
 
 	 ![](/img/mysql-pre-rule.png)
 
-#### Create a post- backup rule for Cassandra
+#### Create a post-exec backup rule for Cassandra
 
 PX-Backup performed a flush and lock on the data in MySQL before our backup. Now, PX-Backup must make sure to also run `UNLOCK` so the database releases the global read lock. It also may be a good idea to use [`FLUSH LOGS`](https://dev.mysql.com/doc/refman/8.0/en/flush.html#flush-logs). `FLUSH LOGS` will rotate logs and update the sequence number of the log. `FLUSH LOGS` is useful when users need a clear distinction between logs before and after a backup occurs. 
 
