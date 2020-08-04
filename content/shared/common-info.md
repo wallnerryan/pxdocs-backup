@@ -2,7 +2,7 @@
 title: Shared
 hidden: true
 ---
-If you have not used Portworx, PX-Backup or run Data services on Kubernetes it is a good idea to review the following information.
+If you have not used Portworx, PX-Backup, or run Data services on Kubernetes it is a good idea to review the following information:
 
 * [Install Portworx on Kubernetes][3]
 * [Application installation][4]

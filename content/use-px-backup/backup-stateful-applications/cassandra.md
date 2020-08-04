@@ -83,7 +83,7 @@ A post-exec backup rule for Cassandra isn't as necessary as the pre-exec backup 
 
 	 ![](/img/cassandra-post-rule.png)
 
-### Use the rules during backup of Cassandra
+### Use the rules during Cassandra backup operations
 
 During the backup creation process, select the rules in the **pre-exec** and **post-exec** dropdowns:
 

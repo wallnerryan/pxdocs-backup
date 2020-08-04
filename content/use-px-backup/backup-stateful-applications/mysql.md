@@ -12,7 +12,8 @@ This page provides instructions for users on how to use pre and post backups rul
 
 MySQL server manages information stored in a location called the [data directory](https://dev.mysql.com/doc/refman/8.0/en/data-directory.html). Often, the data directory is located in the MySQL server filesystem at `/var/lib/mysql`. MySQL stores data within this location that are vital for MySQL. You must make sure to mount Kubernetes PersistentVolumeClaims (PVCs) to the data directory location. In Kubernetes, the spec file `volumeMount` may look like this:
 
-```yaml
+```text
+...
         volumeMounts:
         - name: mysql-data
           mountPath: /var/lib/mysql
@@ -20,6 +21,7 @@ MySQL server manages information stored in a location called the [data directory
       - name: mysql-data
         persistentVolumeClaim:
           claimName: mysql-data
+...
 ```
 
 Within the data directory, MySQL stores schema, table, logs, configuration and database data that corresponds to system, performance, and client data. Mounting a PersistentVolume enables PX-Backup to snapshot and back up MySQL data when needed.
