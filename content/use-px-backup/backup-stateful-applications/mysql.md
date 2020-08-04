@@ -89,7 +89,7 @@ Create the following rule within the PX-Backup interface. Modify the username an
 	app=mysql
 	```
 
-4. Add the Action
+4. Add the Action:
 
 	```text
 	mysql --user=root --password=$MYSQL_ROOT_PASSWORD -Bse 'FLUSH LOGS; UNLOCK TABLES;'
