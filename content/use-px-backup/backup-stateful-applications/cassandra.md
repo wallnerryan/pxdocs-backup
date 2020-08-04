@@ -38,6 +38,7 @@ For more information on how to run Cassandra on Kubernetes, refer to the [Cassan
 
 * Cassandra pods must also be using the `app=cassandra` label.
 * This example uses the cassandra keyspace `newkeyspace` as an example. If you wish to use this rule for another keyspace, simply replace keyspace within this document with your own.
+{{</info>}}
 
 ### Create rules for Cassandra
 
