@@ -43,7 +43,7 @@ For more information on how to run Cassandra on Kubernetes, refer to the [Cassan
 
 Create rules for Cassandra that will run both before and after the backup operation runs:
 
-#### Create a pre- backup rule for Cassandra
+#### Create a pre-exec backup rule for Cassandra
 
 Create a rule that will run `nodetool flush` for our `newkeyspace` before the backup. This is essential as Portworx will take a snapshot of the backing volume before it places that data in the backup target.
 
