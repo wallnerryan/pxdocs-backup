@@ -62,7 +62,7 @@ Create a rule that will run `nodetool flush` for our `newkeyspace` before the ba
 
 	![](/img/cassandra-pre-rule.png)
 
-#### Create a post- backup rule for Cassandra
+#### Create a post-exec backup rule for Cassandra
 
 A post-exec backup rule for Cassandra isn't as necessary as the pre-exec backup rules above. However, for completeness in production and to verify a keyspace is not corrupt after the backup occurs, create a rule that runs `nodetool verify`. The verify command will verify (check data checksums for) one or more tables.
 
