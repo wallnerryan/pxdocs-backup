@@ -83,7 +83,7 @@ Create the following rule within the PX-Backup interface. Modify the username an
 
 1. Navigate to **Settings** → **Rules** → **Add New**.
 2. Add a name for your Rule.
-3. Add the app label
+3. Add the app label:
 
 	```text
 	app=mysql
