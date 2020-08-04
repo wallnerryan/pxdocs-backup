@@ -62,7 +62,7 @@ Create the following rule within the PX-Backup interface. Modify the username an
 	mysql --user=root --password=$MYSQL_ROOT_PASSWORD -Bse 'FLUSH TABLES WITH READ LOCK;system ${WAIT_CMD};'
 	```
 
- ![](/img/mysql-pre-rule.png)
+	 ![](/img/mysql-pre-rule.png)
 
 #### Create a post- backup rule for Cassandra
 
