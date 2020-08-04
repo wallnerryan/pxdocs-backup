@@ -54,7 +54,7 @@ Create a rule that will run `nodetool flush` for our `newkeyspace` before the ba
 	app=cassandra
 	```
 
-4. Add the Action
+4. Add the Action:
 
 	```text
 	nodetool flush -- <your-cassandra-keyspace>;
