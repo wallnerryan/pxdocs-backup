@@ -68,7 +68,8 @@ Create the following rule within the PX-Backup interface. Modify the username an
 
 PX-Backup performed a flush and lock on the data in MySQL before our backup. Now, PX-Backup must make sure to also run `UNLOCK` so the database releases the global read lock. It also may be a good idea to use [`FLUSH LOGS`](https://dev.mysql.com/doc/refman/8.0/en/flush.html#flush-logs). `FLUSH LOGS` will rotate logs and update the sequence number of the log. `FLUSH LOGS` is useful when users need a clear distinction between logs before and after a backup occurs. 
 
-**Note:** 
+{{<info>}}
+**NOTE:** 
 
 * Post backup rules are not allowed to run in the background, a WAIT_CMD is not needed.
 * Flushing logs is optional here but will add it to our post- backup rule for completeness.
