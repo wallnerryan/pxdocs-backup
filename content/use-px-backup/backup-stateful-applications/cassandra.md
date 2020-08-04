@@ -9,7 +9,6 @@ disableprevnext: true
 
 This page provides instructions for users on how to use pre- and post-backup rules with PX-Backup to achieve application-consistent backups for Cassandra in production.
 
-## Background
 
 On its own, Cassandra is resilient to node failures. However, you still need Cassandra backups to recover from the following scenarios:
 
