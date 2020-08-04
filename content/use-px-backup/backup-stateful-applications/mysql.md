@@ -40,7 +40,7 @@ For more information on how to run MySQL on Kubernetes, refer to [this article](
 
 Create rules for MySQL that will run both before and after the backup operation runs:
 
-#### Create a pre- backup rule for Cassandra
+#### Create a pre-exec backup rule for Cassandra
 
 Before a backup of MySQL occurs, Portworx, Inc. recommends you to flush certain data to disk so that the backup remains consistent. Database tables and logs are examples of data that should be flushed. It is also important in MySQL to lock the tables so no new I/O transactions attempt to add records during the backup, or MySQL may also become inconsistent. 
 
