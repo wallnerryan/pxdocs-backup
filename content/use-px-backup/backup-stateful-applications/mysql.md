@@ -73,6 +73,7 @@ PX-Backup performed a flush and lock on the data in MySQL before our backup. Now
 
 * Post backup rules are not allowed to run in the background, a WAIT_CMD is not needed.
 * Flushing logs is optional here but will add it to our post- backup rule for completeness.
+{{</info>}}
 
 Create the following rule within the PX-Backup interface. Modify the username and password for how they are configured in your Kubernetes environment.
 
