@@ -79,7 +79,7 @@ A post-exec backup rule for Cassandra isn't as necessary as the pre-exec backup 
 	nodetool verify -- <your-cassandra-keyspace>;
 	```
 
- ![](/img/cassandra-post-rule.png)
+	 ![](/img/cassandra-post-rule.png)
 
 ### Use the rules during backup of Cassandra
 
