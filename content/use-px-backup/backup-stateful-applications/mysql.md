@@ -58,13 +58,13 @@ Create the following rule within the PX-Backup interface. Modify the username an
 
 1. Navigate to **Settings** → **Rules** → **Add New**.
 2. Add a name for your Rule.
-3. Add the app label
+3. Add the following app label:
 
 	```text
 	app=mysql
 	```
 
-4. Add the Action
+4. Add the following action:
 
 	```text
 	mysql --user=root --password=$MYSQL_ROOT_PASSWORD -Bse 'FLUSH TABLES WITH READ LOCK;system ${WAIT_CMD};'
@@ -87,13 +87,13 @@ Create the following rule within the PX-Backup interface. Modify the username an
 
 1. Navigate to **Settings** → **Rules** → **Add New**.
 2. Add a name for your Rule.
-3. Add the app label:
+3. Add the following app label:
 
 	```text
 	app=mysql
 	```
 
-4. Add the Action:
+4. Add the following action:
 
 	```text
 	mysql --user=root --password=$MYSQL_ROOT_PASSWORD -Bse 'FLUSH LOGS; UNLOCK TABLES;'

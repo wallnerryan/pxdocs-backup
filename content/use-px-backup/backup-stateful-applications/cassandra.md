@@ -49,13 +49,13 @@ Create a rule that will run `nodetool flush` for our `newkeyspace` before the ba
 
 1. Navigate to **Settings** → **Rules** → **Add New**.
 2. Add a name for your Rule.
-3. Add the app label:
+3. Add the following app label:
 
 	```text
 	app=cassandra
 	```
 
-4. Add the Action:
+4. Add the following action:
 
 	```text
 	nodetool flush -- <your-cassandra-keyspace>;
@@ -69,13 +69,13 @@ A post-exec backup rule for Cassandra isn't as necessary as the pre-exec backup 
 
 1. Navigate to **Settings** → **Rules** → **Add New**.
 2. Add a name for your Rule.
-3. Add the app label:
+3. Add the following app label:
 
 	```text
 	app=cassandra
 	```
 
-4. Add the Action:
+4. Add the following action:
 
 	```text
 	nodetool verify -- <your-cassandra-keyspace>;
