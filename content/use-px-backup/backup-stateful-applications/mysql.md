@@ -44,7 +44,9 @@ Before a backup of MySQL occurs, Portworx, Inc. recommends you to flush certain 
 
 To accomplish this, the [(`FLUSH TABLES WITH READ LOCK`)](https://dev.mysql.com/doc/refman/8.0/en/flush.html#flush-tables-with-read-lock) command is used in a pre-backup rule. The commandd will lock the tables with a global read lock and allow Portworx to take a application-consistent snapshot.
 
-**Note:** Set this rule to run in the background. This requires a `WAIT_CMD` to allow the rule to execute and exit properly.
+{{<info>}}
+**NOTE:** Set this rule to run in the background. This requires a `WAIT_CMD` to allow the rule to execute and exit properly.
+{{</info>}}
 
 Create the following rule within the PX-Backup interface. Modify the username and password for how they are configured in your Kubernetes environment.
 
