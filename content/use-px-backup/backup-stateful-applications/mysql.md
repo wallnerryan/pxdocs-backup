@@ -95,7 +95,7 @@ Create the following rule within the PX-Backup interface. Modify the username an
 	mysql --user=root --password=$MYSQL_ROOT_PASSWORD -Bse 'FLUSH LOGS; UNLOCK TABLES;'
 	```
 
- ![](/img/mysql-post-rule.png)
+	 ![](/img/mysql-post-rule.png)
 
 ### Use the rules during backup of MySQL
 
