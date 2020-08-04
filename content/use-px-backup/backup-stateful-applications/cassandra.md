@@ -33,6 +33,7 @@ For more information on how to run Cassandra on Kubernetes, refer to the [Cassan
 
 {{% content "shared/common-info.md" %}}
 
+{{<info>}}
 **NOTE:**
 
 * Cassandra pods must also be using the `app=cassandra` label.
