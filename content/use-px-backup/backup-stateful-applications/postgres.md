@@ -1,13 +1,13 @@
 ---
 title: Backup PostgreSQL on Kubernetes
 description: 
-keywords: 
+keywords: backup, postgres
 weight: 4
 hidesections: true
 disableprevnext: true
 ---
 
-This page provides instructions for users on how to use pre and post backups rules with PX-Backup to achieve application-consistent backups for PostgreSQL on Kubernetes in production.
+You can use the instructions on this page to create pre and post backup rules with PX-Backup, which take application-consistent backups for PostgreSQL on Kubernetes in production.
 
 Postgres places data within a data directory known as `PGDATA`. The most common location for `PGDATA` is `/var/lib/pgsql/data`. You must configure your Kubernetes spec file with this volumeMount when using a persistent volume. 
 

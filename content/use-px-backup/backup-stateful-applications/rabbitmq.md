@@ -1,13 +1,13 @@
 ---
 title: Backup RabbitMQ on Kubernetes
 description: 
-keywords: 
+keywords: backup, rabbitmq
 weight: 4
 hidesections: true
 disableprevnext: true
 ---
 
-This page provides instructions for users on how to use pre and post backups rules with PX-Backup to achieve application-consistent backups for RabbitMQ on Kubernetes in production.
+You can use the instructions on this page to create pre and post backup rules with PX-Backup, which take application-consistent backups for RabbitMQ on Kubernetes in production.
 
 Every RabbitMQ node uses a number of files and directories to load configuration, metadata, and log files. The directory setting which configures RabbitMQ’s node database directory is called `RABBITMQ_MNESIA_BASE`. The databases in this directory hold RabbitMQ messages. This directory can be overridden and therefore configured differently. Most often it is located at `/var/lib/rabbitmq/mnesia`.
 
