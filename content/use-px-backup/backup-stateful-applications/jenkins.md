@@ -9,7 +9,7 @@ disableprevnext: true
 
 You can use the instructions on this page to create pre and post backup rules with PX-Backup, which take application-consistent backups for Jenkins on Kubernetes in production.
 
-Jenkins stores data within a directory known as `JENKINS_HOME`. You should configure a persistent volume for Jenkins so that the entire directory is backed by a volume to capture all data associated with Jenkins. Workspaces, plugins, jobs, user content and overall configuration within this directory is vital when recovering from various types of failures. 
+Jenkins stores data within a directory known as `JENKINS_HOME`. You should configure a persistent volume for Jenkins so that the entire directory is backed by a volume to capture all data associated with Jenkins. Workspaces, plug-ins, jobs, user content and overall configuration within this directory is vital when recovering from various types of failures. 
 
 See below for a snippet of what this might look like in a Kubernetes spec file.
 

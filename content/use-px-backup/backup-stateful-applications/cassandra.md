@@ -1,5 +1,5 @@
 ---
-title: Bacckup Cassandra on Kubernetes
+title: Backup Cassandra on Kubernetes
 description: 
 keywords: backup, cassandra
 weight: 4

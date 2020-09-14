@@ -11,12 +11,12 @@ You can use the instructions on this page to create pre and post backup rules wi
 
 You should first configure the Elasticsearch data directory tp use a PVC to prevent permanent data loss. Mount a Portworx volume for this purpose to `/user/share/elasticsearch/data` inside the Kubernetes pod. This will also enable PX-Backup to backup and restore the data stored in this location.
 
-Before usnig this guide, make sure and configure PVCs for `elasticsearch-data`. Use the below file as an example. 
+Before using this guide, make sure and configure PVCs for `elasticsearch-data`. Use the below file as an example. 
 
 {{<info>}}
 **NOTE:** 
 
-The below template can not be used alone. Please follow pre-requisits from the following [elastic on kubernetes operations guide](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html).
+The template below can not be used alone. Please follow pre-requisites from the following [elastic on kubernetes operations guide](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html).
 {{</info>}}
 
 
@@ -62,7 +62,7 @@ spec:
       path.repo: ["/usr/share/elasticsearch/backups"]
 ```
 
-Elasticsearch can also create a snapshot repository to store index snapshots produced by the internal snapshot and restore API. For this, the above template uses a Portworx shared volume and named `elasticsearch-backups` to create a shared filesystem across all Elasticsearch nodes to be used to store the index snapshots.
+Elasticsearch can also create a snapshot repository to store index snapshots produced by the internal snapshot and restore API. For this, the above template uses a Portworx shared volume and named `elasticsearch-backups` to create a shared file-system across all Elasticsearch nodes to be used to store the index snapshots.
 
 ## Installation
 
@@ -72,7 +72,7 @@ Elasticsearch can also create a snapshot repository to store index snapshots pro
 
 {{<info>}}
 **NOTE:** 
-* The rules below will use a username `elastic` and password specific to the environment. You will need to modify the rule to use your username and password for your environment.
+* The rules below will use a user name `elastic` and password specific to the environment. You will need to modify the rule to use your user name and password for your environment.
 {{</info>}}
 
 ### Create rules for Elasticsearch
@@ -84,8 +84,8 @@ Create rules for Elasticsearch that will run both before and after the backup op
 For the pre-backup rule you will create a rule that performs multiple actions.
 
 - Freeze the index
-- Flush all indices in Elasticsearch
-- Create an Elasticsearch index snapshot of all indices
+- Flush all indexes in Elasticsearch
+- Create an Elasticsearch index snapshot of all indexes
 
 Create the rule.
 
