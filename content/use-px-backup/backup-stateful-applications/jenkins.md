@@ -34,7 +34,6 @@ Once you configure a PVC to be mounted at `/var/jenkins_home` you can use the be
 {{% content "shared/common-info.md" %}}
 
 {{<info>}}
-**NOTE:** 
 **NOTE:** These examples assume that the Jenkins CLI is available within the Jenkins pod. You can make sure its available in the Jenkins pod(s) by running the below command.
 
 ```
