@@ -14,7 +14,6 @@ You should first configure the Elasticsearch data directory tp use a PVC to prev
 Before using this guide, make sure and configure PVCs for `elasticsearch-data`. Use the below file as an example. 
 
 {{<info>}}
-**NOTE:** 
 **NOTE:** The template below can not be used alone. Please follow pre-requisites from the following [elastic on kubernetes operations guide](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html).
 {{</info>}}
 
