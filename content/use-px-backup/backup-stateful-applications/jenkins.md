@@ -73,7 +73,7 @@ Assume the Jenkins deployment has a job called `job-1`, you will use the pre-exe
 
 #### Create a post-exec backup rule for Jenkins
 
-After our backup is triggered, we can start the build for `job-1` again using a post-exec rule. This ensures our job is not running during the backup and is restarted after the backup data is captured. 
+After your backup is triggered, you can start the build for `job-1` again using a post-exec rule. This ensures your job is not running during the backup and is restarted after the backup data is captured. 
 
 1. Navigate to **Settings** → **Rules** → **Add New**.
 2. Add a name for your Rule.
