@@ -48,7 +48,7 @@ Create rules for Jenkins that will run both before and after the backup operatio
 
 #### Create a pre-exec backup rule for Jenkins
 
-Let's assume the Jenkins deployment has a job called `job-1`. We will use the pre-exec rule to make sure this job is stopped before taking our snapshot.
+Assume the Jenkins deployment has a job called `job-1`, you will use the pre-exec rule to make sure this job is stopped before taking our snapshot.
 
 {{<info>}}
 **NOTE:** 
