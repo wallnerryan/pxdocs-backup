@@ -16,7 +16,7 @@ Before using this guide, make sure and configure PVCs for `elasticsearch-data`. 
 {{<info>}}
 **NOTE:** 
 
-The template below can not be used alone. Please follow pre-requisites from the following [elastic on kubernetes operations guide](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html).
+**NOTE:** The template below can not be used alone. Please follow pre-requisites from the following [elastic on kubernetes operations guide](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html).
 {{</info>}}
 
 
