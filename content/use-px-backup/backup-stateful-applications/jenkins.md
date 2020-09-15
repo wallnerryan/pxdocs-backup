@@ -52,7 +52,7 @@ Let's assume the Jenkins deployment has a job called `job-1`. We will use the pr
 
 {{<info>}}
 **NOTE:** 
-Stopping a job is not necessary to backup Jenkins. It is used as an example of a pre backup rule. You may run other commands available within the Jenkins pod here as well.
+**NOTE:** Stopping a job is not necessary to backup Jenkins. It is used as an example of a pre backup rule. You may run other commands available within the Jenkins pod here as well.
 {{</info>}}
 
 1. Navigate to **Settings** → **Rules** → **Add New**.
