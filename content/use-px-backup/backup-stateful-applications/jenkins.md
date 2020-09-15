@@ -35,7 +35,7 @@ Once you configure a PVC to be mounted at `/var/jenkins_home` you can use the be
 
 {{<info>}}
 **NOTE:** 
-These examples assume that the Jenkins CLI is available within the Jenkins pod. You can make sure its available in the Jenkins pod(s) by running the below command.
+**NOTE:** These examples assume that the Jenkins CLI is available within the Jenkins pod. You can make sure its available in the Jenkins pod(s) by running the below command.
 
 ```
 kubectl exec <jenkins-deployment-pod> -n jenkins -- /bin/sh -c "wget http://<operations-center-url>:>port-number>/jnlpJars/jenkins-cli.jar -O /var/jenkins_home/cli.jar"
