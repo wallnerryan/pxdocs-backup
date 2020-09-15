@@ -70,7 +70,7 @@ Elasticsearch can also create a snapshot repository to store index snapshots pro
 
 {{<info>}}
 **NOTE:** 
-* The rules below will use a user name `elastic` and password specific to the environment. You will need to modify the rule to use your user name and password for your environment.
+The rules below will use a user name `elastic` and password specific to the environment. You will need to modify the rule to use your user name and password for your environment.
 {{</info>}}
 
 ### Create rules for Elasticsearch
