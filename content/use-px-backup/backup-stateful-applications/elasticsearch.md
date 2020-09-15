@@ -9,7 +9,7 @@ disableprevnext: true
 
 You can use the instructions on this page to create pre and post backup rules with PX-Backup, which take application-consistent backups for Elasticsearch on Kubernetes in production.
 
-You should first configure the Elasticsearch data directory tp use a PVC to prevent permanent data loss. Mount a Portworx volume for this purpose to `/user/share/elasticsearch/data` inside the Kubernetes pod. This will also enable PX-Backup to backup and restore the data stored in this location.
+The Elasticsearch data directory is used prevent permanent data loss and is typically located at `/user/share/elasticsearch/data` inside the Kubernetes pod. This will also enable PX-Backup to backup and restore the data stored in this location.
 
 Before using this guide, make sure and configure PVCs for `elasticsearch-data`. Use the below file as an example. 
 
@@ -70,7 +70,9 @@ Elasticsearch can also create a snapshot repository to store index snapshots pro
 
 {{<info>}}
 **NOTE:** 
-The rules below will use a user name `elastic` and password specific to the environment. You will need to modify the rule to use your user name and password for your environment.
+
+* The rules below will use a user name `elastic` and password specific to the environment. You will need to modify the rule to use your user name and password for your environment.
+* You should mount a PVC to the elasticsearch data directory. This is typically located at `/user/share/elasticsearch/data`.
 {{</info>}}
 
 ### Create rules for Elasticsearch
