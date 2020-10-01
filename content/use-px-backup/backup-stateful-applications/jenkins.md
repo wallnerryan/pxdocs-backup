@@ -9,7 +9,7 @@ disableprevnext: true
 
 You can use the instructions on this page to create pre and post backup rules with PX-Backup, which take application-consistent backups for Jenkins on Kubernetes in production.
 
-Jenkins stores data within a directory known as `JENKINS_HOME`. You should configure a persistent volume for Jenkins so that the entire directory is backed by a volume to capture all data associated with Jenkins. Workspaces, plug-ins, jobs, user content and overall configuration within this directory is vital when recovering from various types of failures. 
+Jenkins stores data within a directory known as `JENKINS_HOME`. Workspaces, plug-ins, jobs, user content and overall configuration exist within this directory and are vital when recovering from various types of failures. 
 
 See below for a snippet of what this might look like in a Kubernetes spec file.
 
@@ -34,13 +34,16 @@ Once you configure a PVC to be mounted at `/var/jenkins_home` you can use the be
 {{% content "shared/common-info.md" %}}
 
 {{<info>}}
-**NOTE:** These examples assume that the Jenkins CLI is available within the Jenkins pod. You can make sure its available in the Jenkins pod(s) by running the below command.
+**NOTE:** 
 
-```
-kubectl exec <jenkins-deployment-pod> -n jenkins -- /bin/sh -c "wget http://<operations-center-url>:>port-number>/jnlpJars/jenkins-cli.jar -O /var/jenkins_home/cli.jar"
-```
+* You should configure a persistent volume for `JENKINS_HOME` so that the entire directory is backed by a volume to capture all data associated with Jenkins.
+* These examples assume that the Jenkins CLI is available within the Jenkins pod. You can make sure its available in the Jenkins pod(s) by running the below command.
 
+    ```
+	kubectl exec <jenkins-deployment-pod> -n jenkins -- /bin/sh -c "wget http://<operations-center-url>:>port-number>/jnlpJars/jenkins-cli.jar -O /var/jenkins_home/cli.jar"
+	```
 {{</info>}}
+
 
 ### Create rules for Jenkins
 
@@ -52,7 +55,7 @@ Assume the Jenkins deployment has a job called `job-1`, you will use the pre-exe
 
 {{<info>}}
 **NOTE:** 
-**NOTE:** Stopping a job is not necessary to backup Jenkins. It is used as an example of a pre backup rule. You may run other commands available within the Jenkins pod here as well.
+Stopping a job is not necessary to backup Jenkins. It is used as an example of a pre backup rule. You may run other commands available within the Jenkins pod here as well.
 {{</info>}}
 
 1. Navigate to **Settings** → **Rules** → **Add New**.

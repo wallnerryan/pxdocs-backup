@@ -13,11 +13,6 @@ The Elasticsearch data directory is used prevent permanent data loss and is typi
 
 Before using this guide, make sure and configure PVCs for `elasticsearch-data`. Use the below file as an example. 
 
-{{<info>}}
-**NOTE:** The template below can not be used alone. Please follow pre-requisites from the following [elastic on kubernetes operations guide](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html).
-{{</info>}}
-
-
 ```
 apiVersion: elasticsearch.k8s.elastic.co/v1
 kind: Elasticsearch
@@ -71,6 +66,7 @@ Elasticsearch can also create a snapshot repository to store index snapshots pro
 {{<info>}}
 **NOTE:** 
 
+* The templat above can not be used alone. Please follow pre-requisites from the following [elastic on kubernetes operations guide](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html).
 * The rules below will use a user name `elastic` and password specific to the environment. You will need to modify the rule to use your user name and password for your environment.
 * You should mount a PVC to the elasticsearch data directory. This is typically located at `/user/share/elasticsearch/data`.
 {{</info>}}
@@ -119,9 +115,9 @@ Create the rule.
 
 #### Create a post-exec backup rule for Elasticsearch
 
-Performing the `_freeze` and `_flush` on our index and calling the snapshot API gives us all that we need for flexible and accurate restores.
+Performing the `_freeze` and `_flush` operations on your index before calling the snapshot API ensures flexible and accurate restores by making sure the database isn't currently being written into.
 
-Since we used freeze , you will want a post exec rule to provide a rule to run `_unfreeze`. Below is a post-exec rule which runs `_unfreeze` on customer index.
+Since you performed a  `_freeze`operation when you created a backup, you must create a post exec rule to perform an `_unfreeze` operation. The steps below create a post-exec rule which runs `_unfreeze` on the `customer` index:
 
 1. Navigate to **Settings** → **Rules** → **Add New**.
 2. Add a name for your Rule.
@@ -139,9 +135,9 @@ Since we used freeze , you will want a post exec rule to provide a rule to run `
 
     ![](/img/elastic-post-rule.png)
 
-### Use the rules during backup of Elasticsearch
+### Associate the pre and post-exec rules with the Elasticsearch backup
 
-During the backup creation process, select the rules in the **pre-exec** and **post-exec** drop downs:
+Create a backup for your Elasticsearch application. Select the rules you created in the steps above from the **pre-exec** and **post-exec** drop downs:
 
 ![](/img/elastic-use-rules.png)
 
