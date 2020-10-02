@@ -12,30 +12,28 @@ PX-Backup can be installed on any Kubernetes cluster using Helm charts as long a
 
 ## Prerequisites
 
-* Stork 2.4.0 or newer
+* Stork 2.5.0 or newer
 * If you're using an external OIDC provider, you must use certificates signed by a trusted certificate authority
-* If you're using PX-Backup with {{< pxEnterprise >}}, you must use {{< pxEnterprise >}} version 2.5.0 or newer
 * [Helm](https://helm.sh/docs/intro/install/)
 
 {{<info>}}
 **NOTE:** PX-Backup does not support the following Portworx features:
 
 * PX-Security
-* PX-Essentials
+* Portworx Essentials
 {{</info>}}
 
 ## Prepare air-gapped environments
 
 If your cluster is internet-connected, skip this section. If your cluster is air-gapped, you must pull the following Docker images to either your docker registry, or your server:
 
-* docker.io/portworx/pxcentral-onprem-api:1.0.4
-* docker.io/portworx/pxcentral-onprem-ui-frontend:1.1.2.1
-* docker.io/portworx/pxcentral-onprem-ui-backend:1.1.2.1
-* docker.io/portworx/pxcentral-onprem-ui-lhbackend:1.1.2.1
-* docker.io/portworx/px-backup:1.0.2
-* docker.io/portworx/pxcentral-onprem-post-setup:1.0.4
-* docker.io/portworx/keycloak-login-theme:1.0.2
+* docker.io/portworx/px-backup:1.1.0
+* docker.io/portworx/pxcentral-onprem-api:1.1.0
+* docker.io/portworx/pxcentral-onprem-ui-backend:1.1.3
+* docker.io/portworx/pxcentral-onprem-ui-frontend:1.1.3
+* docker.io/portworx/pxcentral-onprem-ui-lhbackend:1.1.3
 * docker.io/bitnami/etcd:3.4.7-debian-10-r14
+* docker.io/portworx/pxcentral-onprem-post-setup:1.1.1
 * docker.io/bitnami/postgresql:11.7.0-debian-10-r9
 * docker.io/jboss/keycloak:9.0.2
 * docker.io/portworx/keycloak-login-theme:1.0.2
